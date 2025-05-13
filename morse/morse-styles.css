@@ -1,0 +1,16 @@
+/* Additional styles specific to morse translator */
+.language-container h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+#play-morse {
+  background-color: var(--secondary-color);
+  color: white;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+#play-morse:hover {
+  background-color: #2d9547;
+}
