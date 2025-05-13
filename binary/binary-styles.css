@@ -1,0 +1,5 @@
+/* Additional styles specific to binary translator */
+.language-container h3 {
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
