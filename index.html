@@ -1,0 +1,63 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Traductor gratuito en línea con tecnología de Google Translate API">
+  <meta name="keywords" content="traductor, idioma, traducción, google translate, herramienta de idiomas, multilingüe">
+  <meta name="author" content="Traductor App">
+  <meta name="robots" content="index, follow">
+  <title>Traductor Online</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Traductor Online</h1>
+      <button id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </button>
+    </header>
+    
+    <div class="translation-container">
+      <div class="language-container">
+        <div class="select-container">
+          <select id="source-language"></select>
+        </div>
+        <textarea id="source-text" placeholder="Escribe texto para traducir..."></textarea>
+        <div class="controls">
+          <button id="clear-source" aria-label="Borrar texto"><i class="fas fa-times"></i></button>
+          <button id="copy-source" aria-label="Copiar texto"><i class="fas fa-copy"></i></button>
+          <button id="speak-source" aria-label="Leer texto"><i class="fas fa-volume-up"></i></button>
+        </div>
+      </div>
+      
+      <button id="swap-languages" aria-label="Intercambiar idiomas">
+        <i class="fas fa-exchange-alt"></i>
+      </button>
+      
+      <div class="language-container">
+        <div class="select-container">
+          <select id="target-language"></select>
+        </div>
+        <textarea id="target-text" placeholder="Traducción..." readonly></textarea>
+        <div class="controls">
+          <button id="copy-target" aria-label="Copiar traducción"><i class="fas fa-copy"></i></button>
+          <button id="speak-target" aria-label="Leer traducción"><i class="fas fa-volume-up"></i></button>
+        </div>
+      </div>
+    </div>
+    
+    <button id="translate-btn">Traducir</button>
+    
+    <footer>
+      <p>Este traductor utiliza la API de Google Translate para proporcionar traducciones en múltiples idiomas</p>
+    </footer>
+  </div>
+  
+  <script src="languages.js"></script>
+  <script src="translator.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
