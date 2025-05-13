@@ -13,12 +13,31 @@
 <body>
   <div class="container">
     <header>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle menu">
+        <i class="fas fa-bars"></i>
+      </button>
       <h1>Traductor Online</h1>
       <button id="theme-toggle" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
         <i class="fas fa-sun"></i>
       </button>
     </header>
+    
+    <nav id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <h3>Traductores</h3>
+        <button id="close-menu" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <ul class="translator-links">
+        <li class="active"><a href="index.html">Traductor General</a></li>
+        <li><a href="binary/index.html">Traductor Binario</a></li>
+        <li><a href="morse/index.html">Traductor Morse</a></li>
+      </ul>
+    </nav>
+    
+    <div id="overlay"></div>
     
     <div class="translation-container">
       <div class="language-container">

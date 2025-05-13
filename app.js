@@ -4,6 +4,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // DOM elements
   const themeToggle = document.getElementById('theme-toggle');
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeMenu = document.getElementById('close-menu');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
   const sourceLanguageSelect = document.getElementById('source-language');
   const targetLanguageSelect = document.getElementById('target-language');
   const sourceText = document.getElementById('source-text');
@@ -37,6 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Initialize theme
   initTheme();
+  
+  // Menu functionality
+  function toggleMenu() {
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = sidebar.classList.contains('active') ? 'hidden' : '';
+  }
+  
+  function closeMenuHandler() {
+    sidebar.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
   
   // Populate language dropdowns
   window.populateLanguageDropdowns();
@@ -117,6 +134,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // Event listeners
+  menuToggle.addEventListener('click', toggleMenu);
+  closeMenu.addEventListener('click', closeMenuHandler);
+  overlay.addEventListener('click', closeMenuHandler);
   themeToggle.addEventListener('click', toggleTheme);
   
   translateBtn.addEventListener('click', translateText);
